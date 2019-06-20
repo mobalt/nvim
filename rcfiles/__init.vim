@@ -1,4 +1,3 @@
-" Required:
 filetype plugin indent on
 
 
@@ -27,14 +26,6 @@ let mapleader=' '
 
 "" Enable hidden buffers
 set hidden
-
-"" Searching
-" Toggle search highlighting
-map <silent> <leader>/ :set hlsearch!<CR>
-set nohlsearch
-set incsearch
-set ignorecase
-set smartcase
 
 "" Directories for swp files
 set nobackup
@@ -111,10 +102,6 @@ set titlestring=%F
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)\
 
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
-nnoremap n nzzzv
-nnoremap N Nzzzv
 
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
@@ -243,23 +230,6 @@ nnoremap <leader>. :lcd %:p:h<CR>
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
-"" fzf.vim
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
-let $FZF_DEFAULT_COMMAND =  "find * -path '*/\.*' -prune -o -path 'node_modules/**' -prune -o -path 'target/**' -prune -o -path 'dist/**' -prune -o  -type f -print -o -type l -print 2> /dev/null"
-
-" The Silver Searcher
-if executable('ag')
-  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
-
-" ripgrep
-if executable('rg')
-  let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
-  set grepprg=rg\ --vimgrep
-  command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
-endif
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -319,9 +289,6 @@ noremap <leader>bn :bn<CR>
 "noremap <leader>c :bd<CR>
 "noremap <leader>bc :bd<CR>
 noremap <leader>bq :bd<CR>
-
-"" Clean search (highlight)
-nnoremap <silent> <leader><space> :noh<cr>
 
 "" Switching windows
 noremap <C-j> <C-w>j
