@@ -21,8 +21,14 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 
+" Use one space, not two, after punctuation.
+set nojoinspaces
+
 "" Map leader to ,
-let mapleader=' '
+"let mapleader=' '
+
+" Always use vertical diffs
+set diffopt+=vertical
 
 "" Enable hidden buffers
 set hidden
@@ -31,13 +37,18 @@ set hidden
 set nobackup
 set noswapfile
 
-set fileformats=unix,dos,mac
+set fileformats=unix,dos
 
 if exists('$SHELL')
     set shell=$SHELL
 else
     set shell=/bin/sh
 endif
+" When the type of shell script is /bin/sh, assume a POSIX-compatible
+" shell for syntax highlighting purposes.
+let g:is_posix = 1
+
+
 
 " session management
 let g:session_directory = "~/.config/nvim/session"
@@ -67,10 +78,6 @@ set guioptions=egmrti
 set gfn=Monospace\ 10
 
 if has("gui_running")
-    if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h12
-        set transparency=7
-    endif
 else
     let g:CSApprox_loaded = 1
 
@@ -270,12 +277,6 @@ endif
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
-
-if has('macunix')
-    " pbcopy for OSX copy/paste
-    vmap <C-x> :!pbcopy<CR>
-    vmap <C-c> :w !pbcopy<CR><CR>
-endif
 
 "" Buffer nav
 "noremap <leader>z :bp<CR>
