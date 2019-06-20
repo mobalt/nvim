@@ -1,6 +1,7 @@
 " This file contains the minimal settings to set the foundation, with the
 " majority of the configuration and settings living in files spread between
 " vim/rcfiles and vim/rcplugins
+" source:   https://github.com/christoomey/dotfiles/blob/master/vim/vimrc
 
 set nocompatible
 
