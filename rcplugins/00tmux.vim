@@ -1,4 +1,4 @@
-" Tmux
+" ---------- Plugins ----------------
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
@@ -6,13 +6,15 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 
 
-" Tmux
-" vim-tmux-runner requires for python compatibility:
+" ---------- Settings ----------------
+" ---------- python compatibility for vim-tmux-runner
 let g:VtrStripLeadingWhitespace = 0
 let g:VtrClearEmptyLines = 0
 let g:VtrAppendNewline = 1
 
-"vim-tmux-runner customizations
+
+
+" ---------- KeyBindings ----------------
 noremap <C-f> :VtrSendLinesToRunner<cr>
 nnoremap <leader>v- :VtrOpenRunner { "orientation": "v" }<cr>
 nnoremap <leader>v\ :VtrOpenRunner { "orientation": "h" }<cr>
