@@ -13,12 +13,6 @@ set updatetime=100
 Plug 'majutsushi/tagbar'
 
 
-
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-
-
 " Goyo: Distraction-free writing in Vim.
 " TODO: bind shortcut
 Plug 'junegunn/goyo.vim'
