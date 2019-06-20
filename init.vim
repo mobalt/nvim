@@ -235,8 +235,11 @@ set number
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  colorscheme molokai
-  "colorscheme solarized
+    set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
+    set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
+    set background=light
+    set termguicolors
+    colorscheme solarized
 endif
 
 set mousemodel=popup
@@ -290,7 +293,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'solarized'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -353,8 +356,15 @@ if !exists('*s:setupWrapping')
 endif
 
 if (exists('+colorcolumn'))
+    " Show the crosshairs for cursor (autohide on exit)
+    set cursorline cursorcolumn
+    au WinEnter * set cursorline cursorcolumn
+    au WinLeave * set nocursorline nocursorcolumn
+    set cursorline
     set colorcolumn=80
-    highlight ColorColumn ctermbg=4
+
+    " Toggle between dark and light within vim
+    call togglebg#map("<F6>")
 endif
 
 "*****************************************************************************
