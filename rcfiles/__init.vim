@@ -230,11 +230,6 @@ set autoread
 "*****************************************************************************
 "" Mappings
 "*****************************************************************************
-source window_mappings.vim
-source git_mappings.vim
-source session_mappings.vim
-source tab_mappings.vim
-" source char_mappings.vim
 
 
 
@@ -494,17 +489,11 @@ let g:vimwiki_list = [{
 "*****************************************************************************
 let g:deoplete#enable_at_startup = 1
 
-"" Include user's local vim config
-if filereadable(expand("~/.config/nvim/local_init.vim"))
-  source ~/.config/nvim/local_init.vim
-endif
 
 "*****************************************************************************
 "" Convenience variables
 "*****************************************************************************
 
 
-source airline.vim
-source tmux_mappings.vim
 
 noremap <F1> :Autoformat<CR>
