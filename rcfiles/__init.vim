@@ -65,8 +65,8 @@ let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
-    set background=light
-    set termguicolors
+    "set background=light
+    "set termguicolors
     colorscheme solarized
 endif
 
