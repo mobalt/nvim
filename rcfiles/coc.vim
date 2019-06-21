@@ -1,4 +1,3 @@
-
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -156,7 +155,3 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
-
-
-" To get correct comment highlighting on jsonc files
-autocmd FileType json syntax match Comment +\/\/.\+$+
