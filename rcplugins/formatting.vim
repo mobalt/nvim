@@ -19,8 +19,7 @@ Plug 'Raimondi/delimitMate'
 
 " Run external formatting tool
 Plug 'chiel92/vim-autoformat'
-
-
+noremap <F1> :Autoformat<CR>
 
 Plug 'tpope/vim-repeat'     " dependency of ↓
 Plug 'tpope/vim-surround'

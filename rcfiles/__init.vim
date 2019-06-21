@@ -83,11 +83,6 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-" grep.vim
-nnoremap <silent> <leader>f :Rgrep<CR>
-let Grep_Default_Options = '-IR'
-let Grep_Skip_Files = '*.log *.db'
-let Grep_Skip_Dirs = '.git node_modules'
 
 
 "*****************************************************************************
@@ -226,21 +221,6 @@ function! s:build_go_files()
     endif
 endfunction
 
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -282,9 +262,6 @@ augroup END
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 
-" javascript
-let g:javascript_enable_domhtmlcss = 1
-
 " vim-javascript
 augroup vimrc-javascript
     autocmd!
@@ -292,8 +269,6 @@ augroup vimrc-javascript
     "autocmd FileType javascript set formatprg=yarn\ run\ prettier-eslint\ --stdin
 augroup END
 
-
-" lua
 
 
 " python
@@ -305,21 +280,6 @@ augroup vimrc-python
                 \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-" jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#goto_assignments_command = "<leader>g"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#documentation_command = "K"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#smart_auto_mappings = 0
-
-" vim-airline
-let g:airline#extensions#virtualenv#enabled = 1
-
-
 
 " rust
 " Vim racer
@@ -327,11 +287,6 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
 
 
 " Vim configuration file (init.vim)
@@ -342,16 +297,3 @@ nnoremap gst :e ~/.tmux.conf<CR>
 " C-s   = saves, sources, & closes vimrc file
 autocmd Filetype vim nnoremap <c-s> :w \| so % \| bdelete<CR>
 
-
-"*****************************************************************************
-"*****************************************************************************
-let g:deoplete#enable_at_startup = 1
-
-
-"*****************************************************************************
-"" Convenience variables
-"*****************************************************************************
-
-
-
-noremap <F1> :Autoformat<CR>
