@@ -16,5 +16,3 @@ let g:jedi#show_call_signatures = "0"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 
-" vim-airline
-let g:airline#extensions#virtualenv#enabled = 1
