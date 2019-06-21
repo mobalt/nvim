@@ -108,25 +108,32 @@ let g:lightline = {
 
 
 
-" Using CocList
-nnoremap <silent> <space>l  :<C-u>CocList<CR>
-nnoremap <silent> <space>ll  :<C-u>CocList<CR>
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Resume last list (slight pause required)
+nnoremap <silent> <leader>l  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>ll  :<C-u>CocList<CR>                " Show available lists
+nnoremap <silent> <leader>l:  :<C-u>CocList vimcommands<cr>
+nnoremap <silent> <leader>l;  :<C-u>CocList cmdhistory<cr>
+nnoremap <silent> <leader>lh  :<C-u>CocList helptags<cr>
+nnoremap <silent> <leader>l/  :<C-u>CocList searchhistory<cr>
+nnoremap <silent> <leader>lk  :<C-u>CocList maps<cr>
+nnoremap <silent> <leader>ld  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <leader>ln  :<C-u>CocList commands<cr>
+nnoremap <silent> <leader>ff  :<C-u>CocList files<cr>
+nnoremap <silent> <leader>f/  :<C-u>CocList grep<cr>
+nnoremap <silent> <leader>fd  :<C-u>CocList folders<cr>
+nnoremap <silent> <leader>fs  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>fo  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>lw  :<C-u>CocList windows<cr>
+nnoremap <silent> <leader>lb  :<C-u>CocList buffers<cr>
+nnoremap <silent> <leader>ls  :<C-u>CocList sessions<cr>
+nnoremap <silent> <leader>lm  :<C-u>CocList marks<cr>
+nnoremap <silent> <leader>lp  :<C-u>CocList yank<cr>
+nnoremap <silent> <leader>s  :<C-u>CocList -I symbols<cr>
+"
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>lp  :<C-u>CocListResume<CR>
+nnoremap <silent> <leader>k  :<C-u>CocPrev<CR>
 
 
 " Use <C-l> for trigger snippet expand.
