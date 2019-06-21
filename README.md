@@ -24,17 +24,56 @@ coc.vim
         * `:Fold` - fold current buffer
         * `:OR` - organize import of current buffer
 * List `<L>l`
+    * `< >` - Resume latest List
     * `l` - Available lists
-    * `e` - Manage extensions
-    * `e` - Manage extensions
-    * `a` - Show all diagnostics
-    * `c` - Show commands
-    * `o` - Find symbol in current document (outline)
-    * `s` - Search workspace symbols
-    * `j` - Do default action for next item
-    * `k` - Do default action for previous item
-    * `p` - Resume latest List
-    * `a` - Manage extensions
+    * Vim
+        * `:` - vimcommands: Commands
+        * `;` - cmdhistory: Command History
+        * `h` - helptags: help tags of vim
+        * `/` - searchhistory: search history
+        * `~` - colors: color schemes
+        * `k` - maps: key mappings
+        * `~` - filetypes: set as filetype
+    * coc.nvim
+        * `~` - extensions: Manage extensions
+        * `~` - Services
+        * `~` - output: output channels
+        * `~` - sources: completion sources
+        * `d` - diagnostics: of current workspace
+        * `n` - Show commands
+    * Search `<L>f`
+        * `/` - grep: grep text by rg
+        * `f` - files: from cwd
+        * `d` - folders: from current workspace
+        * `s` - outline: symbols of current document
+    * Git
+        * `~` - issues: on github
+        * `~` - gstatus: git status of current project
+        * `~` - branches: git branches
+        * `~` - commits: of current project
+        * `~` - bcommits: commits of current file
+        * `~` - gfiles: view files on different branches (or commits, or tags)
+    * Items `<L>l`
+        * `w` - windows: windows list
+        * `b` - buffers
+        * `s` -  sessions: session list
+        * `m` - marks: marks list
+        * `~` - snippets
+        * `p` - yank: list of yank history
+    * Apply
+        * `~` - actions: code actions on selected range
+        * `~` - quickfix
+    * Go to
+        * `~` - links: in current buffer
+        * `~` - tags: search from tags
+        * `~` - locationlist of current window
+        * `~` - location: last jump locations
+        * `~` - mru: most recent used files
+        * `~` - words: word matches of current buffer
+        * `<L>s` - symbols: search workspace symbols
+    * `<L>j` - Do default action for next item
+    * `<L>k` - Do default action for previous item
+    * `<L>a` - Manage extensions
 * Snippets
     * `<C-k>` - Jump to previous placeholder
     * `<C-j>` *(prioritized)*
