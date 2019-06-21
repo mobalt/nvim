@@ -168,10 +168,6 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 
 
 
-" Tagbar (todo)
-"nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
 " Disable visualbell
 set noerrorbells visualbell t_vb=
 if has('autocmd')
