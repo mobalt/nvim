@@ -39,15 +39,6 @@ set noswapfile
 
 set fileformats=unix,dos
 
-if exists('$SHELL')
-    set shell=$SHELL
-else
-    set shell=/bin/sh
-endif
-" When the type of shell script is /bin/sh, assume a POSIX-compatible
-" shell for syntax highlighting purposes.
-let g:is_posix = 1
-
 
 
 "*****************************************************************************
