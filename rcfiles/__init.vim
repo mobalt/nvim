@@ -218,12 +218,6 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>bb :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
-
 
 " syntastic
 let g:syntastic_always_populate_loc_list=1
@@ -417,7 +411,6 @@ au FileType rust nmap <leader>gd <Plug>(rust-doc)
 " "grc" = launches vimrc file
 nnoremap grc :e $MYVIMRC<CR>
 nnoremap gsv :e $MYVIMRC<CR>
-nnoremap gsu :UltiSnipsEdit<CR>
 nnoremap gst :e ~/.tmux.conf<CR>
 " C-s   = saves, sources, & closes vimrc file
 autocmd Filetype vim nnoremap <c-s> :w \| so % \| bdelete<CR>
