@@ -157,8 +157,6 @@ noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
 
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>bb :Buffers<CR>
 nnoremap <silent> <leader>e :FZF -m<CR>
 
 
@@ -177,19 +175,6 @@ endif
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
-
-"" Buffer nav
-"noremap <leader>z :bp<CR>
-"noremap <leader>q :bp<CR>
-"noremap <leader>x :bn<CR>
-"noremap <leader>w :bn<CR>
-noremap <leader>bp :bp<CR>
-noremap <leader>bn :bn<CR>
-
-"" Close buffer
-"noremap <leader>c :bd<CR>
-"noremap <leader>bc :bd<CR>
-noremap <leader>bq :bd<CR>
 
 
 "" Vmap for maintain Visual Mode after shifting > and <
