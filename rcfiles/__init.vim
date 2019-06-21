@@ -50,12 +50,6 @@ let g:is_posix = 1
 
 
 
-" session management
-let g:session_directory = "~/.config/nvim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
-
 "*****************************************************************************
 "" Visual Settings
 "*****************************************************************************
