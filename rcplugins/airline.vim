@@ -36,3 +36,8 @@ else
     let g:airline_symbols.readonly = ''
     let g:airline_symbols.linenr = ''
 endif
+
+
+" ---------- Enable Airline Integrations ----------
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
