@@ -406,6 +406,12 @@ au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
+" snippets
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
+
 
 " Vim configuration file (init.vim)
 " "grc" = launches vimrc file
@@ -415,11 +421,6 @@ nnoremap gst :e ~/.tmux.conf<CR>
 " C-s   = saves, sources, & closes vimrc file
 autocmd Filetype vim nnoremap <c-s> :w \| so % \| bdelete<CR>
 
-" wiki
-let g:vimwiki_list = [{
-            \ 'path': '~/wiki/',
-            \ 'syntax': 'markdown',
-            \ 'ext': '.md' }]
 
 "*****************************************************************************
 "*****************************************************************************
