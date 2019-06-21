@@ -1,6 +1,3 @@
-" Show vertical line at each indentation level
-Plug 'Yggdroot/indentLine'
-
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 " 0.1s instead of 4s for git updates

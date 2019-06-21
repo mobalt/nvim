@@ -71,20 +71,6 @@ set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
 
-if has("gui_running")
-else
-    let g:CSApprox_loaded = 1
-
-    " IndentLine
-    let g:indentLine_enabled = 1
-    let g:indentLine_concealcursor = 0
-    let g:indentLine_char = '┆'
-    let g:indentLine_faster = 1
-
-
-endif
-
-
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -242,11 +228,6 @@ noremap <leader>bn :bn<CR>
 "noremap <leader>bc :bd<CR>
 noremap <leader>bq :bd<CR>
 
-"" Switching windows
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
 
 "" Vmap for maintain Visual Mode after shifting > and <
 vmap < <gv
