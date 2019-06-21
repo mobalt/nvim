@@ -5,13 +5,6 @@ set updatetime=100
 " TODO: map keys to stage changes
 
 
-" Tagbar - A class outline viewer for vim
-" TODO: decide if should learn to use or disable (can slow down with vim-airline)
-Plug 'majutsushi/tagbar'
-"nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-
 " Goyo: Distraction-free writing in Vim.
 " TODO: bind shortcut
 Plug 'junegunn/goyo.vim'
