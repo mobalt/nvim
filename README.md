@@ -1,8 +1,52 @@
 nvim
 ==================================================
 
-Wiki `<L>w`
-* Go to 
+coc.vim
+-------------------------
+* `<C_Space>` - trigger completion
+* diagnostics
+    * `[c`/`]c` - previous/next
+* Go to
+    * `K` - documentation (in preview window)
+    * `gd` - definition
+    * `gy` - type defintion
+    * `gi` - implementation
+    * `gr` - references
+* Actions
+    * `rn` - rename
+    * `<L>f` - format
+    * `<L>a` - code action on selected region
+        * example`<L>aap` - for current paragraph
+    * `<L>ac` - action on current line
+    * `<L>qf` - autofix problem on current line
+    * Additional Commands
+        * `:Format` - format current buffer
+        * `:Fold` - fold current buffer
+        * `:OR` - organize import of current buffer
+* List `<L>l`
+    * `l` - Available lists
+    * `e` - Manage extensions
+    * `e` - Manage extensions
+    * `a` - Show all diagnostics
+    * `c` - Show commands
+    * `o` - Find symbol in current document (outline)
+    * `s` - Search workspace symbols
+    * `j` - Do default action for next item
+    * `k` - Do default action for previous item
+    * `p` - Resume latest List
+    * `a` - Manage extensions
+* Snippets
+    * `<C-k>` - Jump to previous placeholder
+    * `<C-j>` *(prioritized)*
+        * *(visual mode)* Use select text for visual placeholder of snippet
+        * Expand snippet
+        * Jump to next placeholder
+    * `<C-l>` - expand snippet
+    * `<C-j>` - Jump to next placeholder
+    * `<Tab>` - next snippet
+
+## Wiki `<L>w`
+* Go to
     * `w` - Nth Wiki (default 1)
     * `t` - open Nth wiki in new tab (default 1)
     * `s` - wiki select GUI
@@ -130,4 +174,4 @@ Actions on File
 
 Snippets
     * `gsu` - Go to UltiSnipsEdit
-    * 
+    *

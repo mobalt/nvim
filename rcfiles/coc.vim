@@ -109,6 +109,8 @@ let g:lightline = {
 
 
 " Using CocList
+nnoremap <silent> <space>l  :<C-u>CocList<CR>
+nnoremap <silent> <space>ll  :<C-u>CocList<CR>
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions
@@ -124,7 +126,7 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent> <space>lp  :<C-u>CocListResume<CR>
 
 
 " Use <C-l> for trigger snippet expand.
