@@ -13,3 +13,13 @@ if g:vim_bootstrap_editor == 'nvim'
 else
     nnoremap <silent> <leader>sh :VimShellCreate<CR>
 endif
+
+
+if exists('$SHELL')
+    set shell=$SHELL
+else
+    set shell=/bin/sh
+endif
+" When the type of shell script is /bin/sh, assume a POSIX-compatible
+" shell for syntax highlighting purposes.
+let g:is_posix = 1
