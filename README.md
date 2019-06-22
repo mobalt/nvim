@@ -24,6 +24,7 @@ coc.vim
         * `:Fold` - fold current buffer
         * `:OR` - organize import of current buffer
 * List `<L>l`
+    * To learn more about default mappings `:h coc-list-mappings`
     * `< >` - Resume latest List
     * `l` - Available lists
     * Vim
