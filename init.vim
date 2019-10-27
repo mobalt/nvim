@@ -19,8 +19,12 @@ endfunction
 
 call plug#begin(expand('~/.config/nvim/plugged'))
 call s:SourceConfigFilesIn('rcplugins')
+Plug 'hkupty/iron.nvim'
+Plug 'mobalt/wicked'
 call plug#end()
 
+"luafile $HOME/.config/nvim/plugins.lua
 call s:SourceConfigFilesIn('rcfiles')
-
-
+"call remote#host#RegisterPlugin('python3', '/Users/siepmann/.dotfiles/.vim/bundle/neotags/rplugin/python3/neotags.py', [
+    "\ {'sync': v:false, 'name': 'BufWritePost', 'type': 'autocmd', 'opts': {'pattern': '*', 'eval': 'expand("<afile>:p")'}},
+    "\ ])

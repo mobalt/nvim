@@ -215,3 +215,11 @@ Actions on File
 Snippets
     * `gsu` - Go to UltiSnipsEdit
     *
+Installation
+-----------------
+Install Yarn
+Install Vim-Plug:
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```

@@ -49,16 +49,25 @@ set ruler
 set number
 
 let no_buffers_menu=1
+if &term =~ '256color'
+    " disable Background Color Erase (BCE) so that color schemes
+    " render properly when inside 256-color tmux and GNU screen.
+    " see also http://sunaku.github.io/vim-256color-bce.html
+    set t_ut=
+endif
 if !exists('g:not_finish_vimplug')
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
+    "colorscheme dracula
     "set background=light
-    "set termguicolors
     colorscheme solarized
+    set background=light
+    set t_Co=256
+    set termguicolors
 endif
 
+
 set mousemodel=popup
-set t_Co=256
 set guioptions=egmrti
 set gfn=Monospace\ 10
 
@@ -138,6 +147,7 @@ augroup END
 
 " reload file if changed externally
 set autoread
+au CursorHold * checktime
 
 "*****************************************************************************
 "" Mappings
@@ -195,3 +205,4 @@ nnoremap gst :e ~/.tmux.conf<CR>
 " C-s   = saves, sources, & closes vimrc file
 autocmd Filetype vim nnoremap <c-s> :w \| so % \| bdelete<CR>
 
+command Bd bp\|bd \#

@@ -7,7 +7,7 @@
             "ignoredRootPaths": ["~"]
         },
         "efm": {
-            "command": "efm-langserver",
+            "command": "~/go/bin/efm-langserver",
             "args": [],
             // custom config path
             // "args": ["-c", "/path/to/your/config.yaml"],
@@ -94,5 +94,6 @@
     "list.insertMappings": {
         "<C-t>": "action:tabe",
         "<C-w>": "command:wincmd k"
-    }
+    },
+    "coc.preferences.extensionUpdateCheck": "daily"
 }

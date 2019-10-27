@@ -1,5 +1,7 @@
 " A two-way integration between Vim and IPython.
+"Plug 'szymonmaszke/vimpyter'
 Plug 'ivanov/vim-ipython'
+"Plug 'jupyter-vim/jupyter-vim'
 
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
