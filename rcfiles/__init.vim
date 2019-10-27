@@ -59,7 +59,6 @@ if !exists('g:not_finish_vimplug')
     set t_8f=^[[38;2;%lu;%lu;%lum        " set foreground color
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     "colorscheme dracula
-    "set background=light
     colorscheme solarized
     set background=light
     set t_Co=256
