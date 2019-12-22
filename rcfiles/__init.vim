@@ -60,9 +60,9 @@ if !exists('g:not_finish_vimplug')
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     "colorscheme dracula
     "set background=light
-    colorscheme solarized
+    colorscheme solarized8
     set background=light
-    set t_Co=256
+    "set t_Co=256
     set termguicolors
 endif
 

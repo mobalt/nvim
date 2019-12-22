@@ -20,7 +20,6 @@ endfunction
 call plug#begin(expand('~/.config/nvim/plugged'))
 call s:SourceConfigFilesIn('rcplugins')
 Plug 'hkupty/iron.nvim'
-Plug 'mobalt/wicked'
 call plug#end()
 
 "luafile $HOME/.config/nvim/plugins.lua
