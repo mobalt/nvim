@@ -2,11 +2,12 @@ Plug 'vimwiki/vimwiki'
 
 
 let g:vimwiki_list = [{
-            \ 'path': '~/notes/',
+            \ 'path': '~/journal/',
             \ 'syntax': 'markdown',
+            \ 'index': 'README',
             \ 'ext': '.md'
             \ },{
-            \ 'path': '~/datascience/',
+            \ 'path': '~/notes/',
             \ 'syntax': 'markdown',
             \ 'ext': '.md'
             \ }]
