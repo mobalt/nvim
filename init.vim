@@ -9,8 +9,7 @@ set nocompatible
 let mapleader = "\<Space>"
 
 
-call plug#begin(expand('~/.config/nvim/plugged'))
-
+call plug#begin(expand('~/.config/nvim/plugged')) 
 
     "===============================================================================
     "      00tmux
