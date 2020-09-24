@@ -56,7 +56,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     "===============================================================================
     "Plug 'vim-scripts/CSApprox'
 
-    "Plug 'tomasr/molokai'
+    Plug 'tomasr/molokai'
     Plug 'altercation/vim-colors-solarized'
     Plug 'dracula/vim'
     Plug 'lifepillar/vim-solarized8'
@@ -519,10 +519,10 @@ if !exists('g:not_finish_vimplug')
     set t_8b=^[[48;2;%lu;%lu;%lum        " set background color
     "colorscheme dracula
     "set background=light
-    colorscheme solarized8
-    set background=light
     "set t_Co=256
     set termguicolors
+    colorscheme solarized8
+    set background=dark
 endif
 
 
