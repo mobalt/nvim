@@ -241,6 +241,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     Plug 'gorodinskiy/vim-coloresque'
     Plug 'tpope/vim-haml'
     Plug 'mattn/emmet-vim'
+    Plug 'posva/vim-vue'
 
     "===============================================================================
     "      lang_js
