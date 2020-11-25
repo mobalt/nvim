@@ -236,20 +236,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     Plug 'ivanov/vim-ipython'
     "Plug 'jupyter-vim/jupyter-vim'
 
-    Plug 'davidhalter/jedi-vim'
     Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-
-    " jedi-vim
-    let g:jedi#popup_on_dot = 0
-    let g:jedi#goto_assignments_command = "<leader>g"
-    let g:jedi#goto_definitions_command = "<leader>d"
-    let g:jedi#documentation_command = "K"
-    let g:jedi#usages_command = "<leader>n"
-    let g:jedi#rename_command = "<leader>r"
-    let g:jedi#show_call_signatures = "0"
-    let g:jedi#completions_command = "<C-Space>"
-    let g:jedi#smart_auto_mappings = 0
 
 
     "===============================================================================
@@ -332,30 +319,6 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 
     "nnoremap gsu :UltiSnipsEdit<CR>
-
-    "===============================================================================
-    "      syntax
-    "===============================================================================
-    " syntax checker
-    Plug 'scrooloose/syntastic'
-
-    " A collection of language packs
-    Plug 'sheerun/vim-polyglot'
-
-    let g:syntastic_always_populate_loc_list=1
-    let g:syntastic_error_symbol='✗'
-    let g:syntastic_warning_symbol='⚠'
-    let g:syntastic_style_error_symbol = '✗'
-    let g:syntastic_style_warning_symbol = '⚠'
-    let g:syntastic_auto_loc_list=1
-    let g:syntastic_aggregate_errors = 1
-
-
-    " --- Python ---
-    let g:syntastic_python_checkers=['python', 'flake8']
-    " Default syntax highlighting is better than polyglot
-    let g:polyglot_disabled = ['python']
-    let python_highlight_all = 1
 
 
     "===============================================================================
