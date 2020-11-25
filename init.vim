@@ -130,15 +130,6 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 
-    " Show git status of files
-    " TODO: decide if worth install
-    "Plug 'Xuyuanp/nerdtree-git-plugin'
-
-
-
-    " TODO: decide if necessary, it is no longer maintained
-    Plug 'jistr/vim-nerdtree-tabs'
-
 
     "===============================================================================
     "      formatting
@@ -156,15 +147,6 @@ call plug#begin(expand('~/.config/nvim/plugged'))
     " TODO: learn to use
     Plug 'junegunn/vim-easy-align'
 
-
-    " Automatic closing of quotes, parenthesis, brackets in insert mode
-    " TODO: decide if this is helpful or annoying
-    Plug 'Raimondi/delimitMate'
-
-
-    " Run external formatting tool
-    Plug 'chiel92/vim-autoformat'
-    noremap <F1> :Autoformat<CR>
 
     Plug 'tpope/vim-repeat'     " dependency of ↓
     Plug 'tpope/vim-surround'
@@ -434,13 +416,15 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 
     let g:vimwiki_list = [{
+                \ 'name': 'notes',
                 \ 'path': '~/notes/',
                 \ 'syntax': 'markdown',
-                \ 'ext': '.md'
-                \ },{
-                \ 'path': '~/journal/',
-                \ 'syntax': 'markdown',
-                \ 'index': 'README',
+                \ 'nested_syntaxes': {'python': 'python', 'sh': 'bash'},
+                \ 'auto_generate_links': 1,
+                \ 'diary_rel_path': 'daily/',
+                \ 'diary_index': 'daily',
+                \ 'diary_header': 'Daily',
+                \ 'links_space_char': '-',
                 \ 'ext': '.md'
                 \ }]
 
