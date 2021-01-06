@@ -345,7 +345,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 
     let g:vimwiki_list = [{
-                \ 'name': 'notes',
+                \ 'name': 'main',
                 \ 'path': '~/notes/',
                 \ 'syntax': 'markdown',
                 \ 'nested_syntaxes': {'python': 'python', 'sh': 'bash'},
@@ -354,6 +354,11 @@ call plug#begin(expand('~/.config/nvim/plugged'))
                 \ 'diary_index': 'daily',
                 \ 'diary_header': 'Daily',
                 \ 'links_space_char': '-',
+                \ 'ext': '.md'
+                \ },{
+                \ 'path': '~/journal/',
+                \ 'syntax': 'markdown',
+                \ 'index': 'README',
                 \ 'ext': '.md'
                 \ }]
 
