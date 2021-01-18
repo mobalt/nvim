@@ -345,19 +345,31 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 
 
     let g:vimwiki_list = [{
-                \ 'name': 'main',
-                \ 'path': '~/notes/',
+                \ 'name': 'work',
+                \ 'path': '~/work/journal/',
                 \ 'syntax': 'markdown',
                 \ 'nested_syntaxes': {'python': 'python', 'sh': 'bash'},
+                \ 'auto_toc': 1,
                 \ 'auto_generate_links': 1,
-                \ 'diary_rel_path': 'daily/',
-                \ 'diary_index': 'daily',
-                \ 'diary_header': 'Daily',
+                \ 'diary_rel_path': 'weekly/',
+                \ 'diary_index': 'README',
+                \ 'diary_header': 'Weekly Review',
+                \ 'diary_caption_level': 2,
                 \ 'links_space_char': '-',
+                \ 'index': 'README',
                 \ 'ext': '.md'
                 \ },{
-                \ 'path': '~/journal/',
+                \ 'name': 'docs',
+                \ 'path': '~/work/docs/',
                 \ 'syntax': 'markdown',
+                \ 'nested_syntaxes': {'python': 'python', 'sh': 'bash'},
+                \ 'auto_toc': 1,
+                \ 'auto_generate_links': 1,
+                \ 'diary_rel_path': 'scrum/',
+                \ 'diary_index': 'README',
+                \ 'diary_header': 'Scrum Notes',
+                \ 'diary_caption_level': 1,
+                \ 'links_space_char': '-',
                 \ 'index': 'README',
                 \ 'ext': '.md'
                 \ }]
