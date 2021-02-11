@@ -661,6 +661,7 @@ vnoremap K :m '<-2<CR>gv=gv
 " "grc" = launches vimrc file
 nnoremap grc :e $MYVIMRC<CR>
 nnoremap gsv :e $MYVIMRC<CR>
+nnoremap gdic :e $HOME/.config/nvim/spell/en.utf-8.add<CR>
 nnoremap gst :e ~/.tmux.conf<CR>
 " C-s   = saves, sources, & closes vimrc file
 autocmd Filetype vim nnoremap <c-s> :w \| so % \| bdelete<CR>
