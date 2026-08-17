@@ -1,8 +1,9 @@
 return {
+  { "olimorris/onedarkpro.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-latte",
+      colorscheme = "onelight",
     },
   },
 }
