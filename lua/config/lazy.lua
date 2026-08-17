@@ -35,9 +35,12 @@ require("lazy").setup({
   },
   install = { colorscheme = { "onedarkpro.nvim" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
+    -- Disabled: the periodic update check `git fetch`es every plugin, which
+    -- is unwanted network noise in sandboxed/offline environments. Plugins
+    -- are updated explicitly with :Lazy sync instead.
+    enabled = false,
     notify = false, -- notify on update
-  }, -- automatically check for plugin updates
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
