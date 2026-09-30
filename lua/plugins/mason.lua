@@ -24,4 +24,16 @@ return {
       end
     end,
   },
+  {
+    -- The markdown extra asks mason to install markdown-toc, but its npm
+    -- dependency toml@2.3.6 is blocked by the sandbox's supply-chain proxy
+    -- (known high-severity CVEs). Skip it so startup doesn't retry the
+    -- install; conform simply skips formatters that aren't installed.
+    "mason-org/mason.nvim",
+    opts = function(_, opts)
+      opts.ensure_installed = vim.tbl_filter(function(pkg)
+        return pkg ~= "markdown-toc"
+      end, opts.ensure_installed or {})
+    end,
+  },
 }
