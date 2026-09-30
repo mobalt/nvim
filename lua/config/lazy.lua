@@ -37,7 +37,7 @@ require("lazy").setup({
   checker = {
     -- Disabled: the periodic update check `git fetch`es every plugin, which
     -- is unwanted network noise in sandboxed/offline environments. Plugins
-    -- are updated explicitly with :Lazy sync instead.
+    -- are updated explicitly with :UpdateAll (or :Lazy sync) instead.
     enabled = false,
     notify = false, -- notify on update
   },
@@ -57,3 +57,5 @@ require("lazy").setup({
     },
   },
 })
+
+require("config.update")
